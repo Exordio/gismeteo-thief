@@ -1,0 +1,3 @@
+requests~=2.26.0
+lxml~=4.7.1
+fake_headers
