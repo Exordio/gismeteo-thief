@@ -169,7 +169,12 @@ class GismeteoJeweler:
         return unpacked
 
     def __combine_days(self):
-        return [' '.join([self.days[i], self.days[i + 1]]) for i in range(self.w_len)]
+        unpacked = []
+        i = 0
+        while i <= len(self.days) - 1:
+            unpacked.append(' '.join([self.days[i], self.days[i + 1]]))
+            i += 2
+        return unpacked
 
     def __planting_a_tree(self):
         self.tree = html.fromstring(self.page.content)
